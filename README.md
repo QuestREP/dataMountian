@@ -1,3 +1,4 @@
 # dataMountian
 
-Hello World!!
+printf("Hello World!!");
+#codeLife
