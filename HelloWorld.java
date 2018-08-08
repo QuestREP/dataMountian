@@ -1,5 +1,5 @@
 /**
-*Header information
+*Header information.
 *@author Robert Pound
 *@version 1.0
 */
