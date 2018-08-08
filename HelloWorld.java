@@ -4,8 +4,11 @@
 *@version 1.0
 */
 public class HelloWorld {
-	public static void main(String[] args) {
-		System.out.println("Hi there world");
-		//Crazy comment
+	private void HelloWorld() {
+		
 	}
+    public static void main(final String[] args) {
+        System.out.println("Hi there world");
+        //Crazy comment
+    }
 }
