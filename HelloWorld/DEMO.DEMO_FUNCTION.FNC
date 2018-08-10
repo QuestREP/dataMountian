@@ -28,7 +28,7 @@ BEGIN
        RETURN NULL;
      WHEN OTHERS THEN
        -- Consider logging the error and then re-raise
-       --Also fix bugs when you can
+       -- Also fix bugs when you can, no more modification needed
        RAISE;
 END DEMO_FUNCTION;
 /
