@@ -1,5 +1,5 @@
 CREATE OR REPLACE FUNCTION DEMO.DEMO_VIEW RETURN NUMBER IS
-tmpVar NUMBER;
+tmpVar VARCHAR(100);
 /******************************************************************************
    NAME:       DEMO_VIEW
    PURPOSE:    
@@ -20,11 +20,11 @@ tmpVar NUMBER;
 
 ******************************************************************************/
 BEGIN
-   IF (
-   SELECT * FROM DEMO_TABLE
-   WHERE COLUMN2 >= TO_CHAR(ADD_MONTHS(SYSDATE, -1))
-   ) THEN 
-    RETURN (1);
+   tmpVar := NULL;
+   SELECT COLUMN2 INTO tmpVar FROM DEMO_TABLE
+   WHERE COLUMN2 >= TO_CHAR(ADD_MONTHS(SYSDATE, -1));
+   IF (tmpVar IS NOT NULL) THEN
+       RETURN (1);
    END IF;
 EXCEPTION 
     when others then RETURN (0);
